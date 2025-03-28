@@ -1,8 +1,8 @@
 """
-Author: Night-stars-1 nujj1042633805@gmail.com
+Author: Night-stars-1 19710015@qq.com
 Date: 2024-08-20 22:17:31
-LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2025-01-19 16:48:47
+LastEditors: Night-stars-1 19710015@qq.com
+LastEditTime: 2025-03-28 16:00:51
 """
 
 import platform
