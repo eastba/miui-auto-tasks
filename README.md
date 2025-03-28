@@ -97,32 +97,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
-# **鸣谢**
-## 项目
-
-感谢由 [Xiaomi-Community-AutoTask](https://github.com/CMDQ8575/Xiaomi-Community-AutoTask) 启发的部分相关功能代码
-
-## 社区
-
-感谢以下贡献者对本项目做出的贡献
-
-<a href="https://github.com/0-8-4/miui-auto-tasks/graphs/contributors">
-
-  <img src="https://contrib.rocks/image?repo=0-8-4/miui-auto-tasks" />
-
-</a>
-
-![Alt](https://repobeats.axiom.co/api/embed/073d4816527b3720a03cb44fa876fe0de0216124.svg "Repobeats analytics image")
-
-<br><br>
-
-### 本项目所有贡献者感谢所有Star了本项目的人
-
-[![Star History Chart](https://api.star-history.com/svg?repos=0-8-4/miui-auto-tasks&type=Date)](https://star-history.com/#0-8-4/miui-auto-tasks&Date)
-
-## JetBrains 
-
-特别感谢 [JetBrains](https://www.jetbrains.com/) 为开源项目提供免费的 [PyCharm](https://www.jetbrains.com/pycharm/) 等 IDE 的授权  
-[<img src=".github/md_pic/jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/)
-# miui-auto-tasks
