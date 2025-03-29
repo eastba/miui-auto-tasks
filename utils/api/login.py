@@ -59,14 +59,14 @@ class Login:
                 self.cookies != {}
                 and BaseSign(self.account).check_daily_tasks(nolog=True) != []
             ):
-                #log.info("Cookie有效，跳过登录")
+                log.info("Cookie有效，跳过登录")
                 return self.cookies
             elif self.cookies.get("passToken") and (
                 cookies := self.get_cookies_by_passtk(
                     user_id=self.uid, pass_token=self.cookies["passToken"]
                 )
             ):
-                #log.info("Cookie无效，重新复写")
+                log.info("Cookie无效，重新复写")
                 self.cookies.update(cookies)
                 self.account.cookies = self.cookies
                 ConfigManager.write_plugin_data()
