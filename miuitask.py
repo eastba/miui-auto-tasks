@@ -20,19 +20,6 @@ _conf = ConfigManager.data_obj
 
 def main():
     """启动签到"""
-    for account in _conf.accounts:
-        try:
-            for attempt in Retrying(stop=stop_after_attempt(2)):
-                with attempt:
-                    login_obj = Login(account)
-                    if cookies := login_obj.login():
-                        #login_obj.checkin_info()
-                        sign_obj = BaseSign(account)
-                        user_info = sign_obj.user_info()
-                        log.info(f"社区等级: {user_info.title} 成长值: {user_info.point}")
-        except Exception as e:  # 增加对应的 except 块来处理异常
-            log.error(f"处理账号 {account} 时出现错误: {e}")
-
     print_info()
     for account in _conf.accounts:
         try:
@@ -65,6 +52,8 @@ def main():
                             status, reason = task_obj(account, token).sign()
                             if not status and reason == "cookie":
                                 raise ValueError("Cookie失效")
+                        user_info = sign_obj.user_info()
+                        log.info(f"{user_info.title} 成长值: {user_info.point}")
         except ValueError as e:
             log.error(e)
     notify_me(InterceptHandler.message)
