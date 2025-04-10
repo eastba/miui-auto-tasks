@@ -75,7 +75,7 @@ class Login:
                 "https://account.xiaomi.com/pass/serviceLoginAuth2",
                 headers=headers,
                 data=data,
-                cookies={"deviceId": "S13aukyf5y2jecCG"},
+                cookies={"deviceId": "b637f8f8c8c52f38"},
             )
             log.debug(response.text)
             result = response.text.lstrip("&").lstrip("START").lstrip("&")
