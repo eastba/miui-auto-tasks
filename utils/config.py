@@ -80,7 +80,7 @@ class Account:
     ):
         self.uid = uid
         """账户ID 非账户用户名或手机号"""
-        self.password = password
+        self.password = self._password_validator(password)  # 关键修改
         """账户密码或其MD5哈希"""
         self.cookies = cookies or {}
         """账户登录后的cookies"""
@@ -110,11 +110,14 @@ class Account:
         """社区拔萝卜，启用功能意味着你愿意自行承担相关风险"""
         self.WxSign = WxSign
         """微信小程序签到，启用功能意味着你愿意自行承担相关风险"""
-
-    def _password(self):
-        if len(self.password) == 32:
-            return self.password
-        return md5_crypto(self.password)
+        
+    @staticmethod
+    def _password_validator(password: str) -> str:
+        """密码验证与加密"""
+        import re
+        if re.fullmatch(r"^[a-fA-F0-9]{32}$", password):
+            return password.upper()
+        return md5_crypto(password)        
 
     def _cookies(self):
         if isinstance(self.cookies, str):
