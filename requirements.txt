@@ -1,12 +1,13 @@
 cryptography==44.0.1
+pydantic==2.10.6
+jsonpath_ng==1.7.0
 loguru==0.7.3
 onepush==1.4.0
-pydantic==2.10.6
+pycryptodome==3.22.0
 PyYAML==6.0.2
-qrcode==8.0
+qrcode==8.1
 Requests==2.32.3
 requests_toolbelt==1.0.0
+tenacity==9.1.2
 2captcha-python
 pillow
-pycryptodome==3.22.0
-tenacity==9.1.2
